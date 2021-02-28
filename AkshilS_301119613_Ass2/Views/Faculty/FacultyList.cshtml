@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+</head>
+<body>
+    <div align="center" class=" form-style">
+
+        @if (TempData["message"] != null)
+        {
+            <div align="center" class="div-style">
+                @TempData["message"]
+            </div>
+        }
+
+        <h1>Here is the list of registered Faculty!</h1>
+
+        <table>
+            <thead>
+                <tr>
+                    <th class="t-style">Faculty Name</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (Faculty f in Model)
+                {
+                    <tr>
+                        <td>
+                            <form asp-action="FacultyDetails" class="t-style" method="get">
+                                <input type="hidden" name="facultyId" asp-for="@f.FacultyId" />
+                                <button class="div1-style" type="submit">@f.Name</button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+
+        </table>
+    </div>
+</body>
+</html>
+

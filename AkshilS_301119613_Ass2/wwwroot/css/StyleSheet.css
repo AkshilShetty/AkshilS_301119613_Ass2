@@ -1,0 +1,80 @@
+﻿body {
+    background-image: url('/images/home.jpeg');
+    background-color: lightgray;
+}
+
+body, html {
+    margin: 0;
+    font-family: sans-serif, arial, helvetica;
+}
+
+ul#menu li {
+    display: inline;
+}
+
+
+a {
+    outline: none;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    line-height: 3;
+    color: white;
+    font-weight: 600;
+    font-family: cursive;
+}
+
+li:last-child a {
+    margin-right: 0;
+}
+
+
+
+a:hover {
+    font-size: 28px;
+    color: black;
+}
+
+a:active {
+    font-size: 32px;
+    color: blueviolet;
+}
+
+.nav-link {
+    font-size: 24px;
+    text-anchor: middle;
+    margin: 5px;
+}
+
+.system-header {
+    text-align: center;
+    font-size: 60px;
+    font-family: cursive;
+    color: black
+}
+
+.page-header {
+    text-align: center;
+    font-size: 26px;
+    color: black;
+    font-family: monospace;
+    font-weight: 800
+}
+
+.form-div {
+    margin-left: 40%;
+    font-size: 24px;
+    font-family: cursive;
+    font-weight: 800;
+}
+
+.t-header {
+    font-size: 26px;
+    font-family: cursive;
+    font-weight: 800;
+}
+
+.white-bg {
+    background-color:white
+}
+

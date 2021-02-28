@@ -1,0 +1,21 @@
+﻿
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+
+    @if (TempData["message"] != null)
+    {
+        <div align="center" class="div-style">
+            @TempData["message"]
+        </div>
+    }
+
+    <div class="div-style">
+        @Html.Partial("AddFacultyPartialView")
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+﻿@model IEnumerable<AkshilS_301119613_Ass2.Models.Faculty>
+
+@{
+
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    
+    ViewData["Title"] = "Faculties Display"
+      
+    
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+</head>
+<body>
+    <div align="center" class=" form-style">
+        <h1>List of Faculty</h1>
+
+        <table border="4px" class="white-bg">
+            <thead>
+                <tr>
+                    <th class="t-header">Faculty Name</th>
+                    <th class="t-header">Faculty Department</th>
+                    <th class="t-header">Faculty Email</th>
+                    <th class="t-header">Faculty Phone</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (AkshilS_301119613_Ass2.Models.Faculty f in Model)
+                {
+                    <tr>
+
+                        <td>
+                            <input type="hidden" name="name" asp-for="@f.Name" />
+                            @f.Name
+                        </td>
+
+                        <td>
+                            <input type="hidden" name="name" asp-for="@f.Department" />
+                            @f.Department
+                        </td>
+
+                        <td>
+                            <input type="hidden" name="name" asp-for="@f.Email" />
+                            @f.Email
+                        </td>
+
+                        <td>
+                            <input type="hidden" name="name" asp-for="@f.Phone" />
+                            @f.Phone
+                        <td>
+                    </tr>
+                }
+
+        </table>
+    </div>
+</body>
+</html>
+

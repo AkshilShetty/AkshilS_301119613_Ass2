@@ -1,0 +1,53 @@
+﻿@model IEnumerable<AkshilS_301119613_Ass2.Models.Courses>
+@{
+
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Courses Display";
+}
+<table class="table table-hover thead-dark">
+    <thead>
+        <tr>
+            <th scope="col">CourseId</th>
+            <th scope="col">Course Name</th>
+            <th scope="col">Course Duration</th>
+            <th scope="col">Course Department</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        @foreach (var c in Model)
+        {
+            <tr>
+                <th scope="row">@c.CourseId</th>
+                <td>@c.Name</td>
+                <td>@c.degree</td>
+                <td>@c.department</td>
+                <td>
+                    <form asp-action="Delete" method="post">
+                        <a asp-action="AddCourse" class="btn btn-sm btn-warning"
+                           asp-route-courseId="@c.CourseId">
+                            Edit
+                        </a>
+                        <input type="hidden" name="courseId" value="@c.CourseId" />
+                        <button type="submit" class="btn btn-danger btn-sm">
+                            Delete
+                        </button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<div>
+
+    <button class="btn btn-lg btn-light btn-newform" type="button">
+        <span class="glyphicon glyphicon-asterisk"></span>
+        <a asp-action="AddCourse">Add New Courses</a>
+    </button>
+
+
+
+
+
+</div>

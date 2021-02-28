@@ -1,0 +1,22 @@
+﻿@model Faculty
+
+
+<form asp-action="AddFaculty" method="post">
+    <label asp-for="Name">Name of the Faculty:</label>
+    <input class="form-style" asp-for="Name">
+
+    <label asp-for="Phone">Faculty Contact</label>
+    <input class="form-style" asp-for="Phone">
+
+    <label asp-for="Email">Country</label>
+    <input class="form-style" asp-for="Email">
+
+    <label asp-for="Phone">Review</label>
+    <input class="form-style" asp-for="Phone">
+
+
+    <div align="center">
+        <input class="submit-style submit-style-hover" type="submit" value="Save">
+        <input class="submit-style submit-style-hover" type="submit" value="Cancel" asp-action="Index" asp-controller="Home" />
+    </div>
+</form>

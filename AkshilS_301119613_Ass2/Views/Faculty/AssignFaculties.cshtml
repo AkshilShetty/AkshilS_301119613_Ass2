@@ -1,0 +1,44 @@
+﻿
+
+@model AkshilS_301119613_Ass2.Models.Faculty
+@{
+    ViewData["Title"] = "Assign Faculties";
+
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+
+    @if (Model != null)
+    {
+        <div align="center" class="div-style">Your are added! Click <a asp-action="FacultyList">Here </a> to see!</div>
+    }
+
+    <div>
+        <form asp-action="AssignFaculty" method="post">
+
+            <label for="Faculty">Choose Faculty</label>
+            <select id="faculty" name="Faculty">
+                <option value="a">Professor A</option>
+                <option value="b">Professor B</option>
+                <option value="c">Professor C</option>
+            </select>
+
+            <label for="Course">Choose Course</label>
+            <select id="course" name="Course">
+                <option value="a">Course A</option>
+                <option value="b">Course B</option>
+                <option value="c">Course C</option>
+            </select>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+</body>
+</html>
